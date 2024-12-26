@@ -7,11 +7,11 @@ class CounterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("build called");
     return Scaffold(
       floatingActionButton: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          /// Increment Buttom
           FloatingActionButton(
             onPressed: () {
               // Provider.of<CounterProvider>(context,listen: false).increment();
@@ -19,6 +19,8 @@ class CounterView extends StatelessWidget {
             },
             child: const Icon(Icons.add),
           ),
+
+          /// Decrement Button
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: FloatingActionButton(
@@ -31,11 +33,14 @@ class CounterView extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
+      body:
+
+          /// Counter
+          Center(
         child: Consumer<CounterProvider>(
           builder: (context, counterProvider, child) => Text(
-            '${counterProvider.getCount()}',
-            //'${context.watch<CounterProvider>().getCount()}',
+            //'${counterProvider.getCount()}',
+            '${context.watch<CounterProvider>().getCount()}',
             style: const TextStyle(fontSize: 25),
           ),
         ),
