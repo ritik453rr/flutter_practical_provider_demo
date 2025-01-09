@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_demo/list/add_data/add_data_view.dart';
-import 'package:provider_demo/list/list_provider.dart';
+import 'package:provider_demo/data_list/add_data/add_data_view.dart';
+import 'package:provider_demo/data_list/data_list_provider.dart';
 
-class ListPage extends StatelessWidget {
-  const ListPage({super.key});
+class DataListView extends StatelessWidget {
+  const DataListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class ListPage extends StatelessWidget {
                               },
                               icon: const Icon(Icons.edit),
                             ),
-                        
+
                             /// Delete
                             IconButton(
                               onPressed: () {
@@ -67,7 +67,9 @@ class ListPage extends StatelessWidget {
                     );
                   },
                 )
-              : const Center(child: Text("No Data"));
+              : const Center(
+                  child: Text("No Data"),
+                );
         },
       ),
     );

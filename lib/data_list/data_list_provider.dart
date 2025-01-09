@@ -12,13 +12,13 @@ class ListProvider extends ChangeNotifier {
   /// Get list data
   List<Map<String, dynamic>> getData() => _mData;
 
-  /// Update data
+  /// Update data in list
   void updataData(Map<String, dynamic> udatedData, int index) {
     _mData[index] = udatedData;
     notifyListeners();
   }
 
-  /// Delete data
+  /// Delete data from list
   void deleteData(int index) {
     _mData.removeAt(index);
     notifyListeners();

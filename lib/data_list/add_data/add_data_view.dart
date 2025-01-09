@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_demo/list/list_provider.dart';
+import 'package:provider_demo/data_list/data_list_provider.dart';
 
 class AddDataView extends StatelessWidget {
   const AddDataView({super.key});
@@ -16,15 +16,16 @@ class AddDataView extends StatelessWidget {
       ),
       body: Center(
         child: IconButton(
-            onPressed: () {
-              context.read<ListProvider>().addData(
-                {
-                  "name": "Ritik",
-                  "contact": 9690302137,
-                },
-              );
-            },
-            icon: const Icon(Icons.add)),
+          onPressed: () {
+            context.read<ListProvider>().addData(
+              {
+                "name": "Ritik",
+                "contact": 9690302137,
+              },
+            );
+          },
+          icon: const Icon(Icons.add),
+        ),
       ),
     );
   }
