@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_demo/counter/counter_provider.dart';
+import 'package:provider_demo/screens/counter/counter_provider.dart';
 
 class CounterView extends StatelessWidget {
   const CounterView({super.key});

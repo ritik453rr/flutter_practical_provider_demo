@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_demo/data_list/data_list_provider.dart';
+import 'package:provider_demo/screens/data_list/data_list_provider.dart';
 
 class AddDataView extends StatelessWidget {
   const AddDataView({super.key});
@@ -19,8 +19,8 @@ class AddDataView extends StatelessWidget {
           onPressed: () {
             context.read<ListProvider>().addData(
               {
-                "name": "Ritik",
-                "contact": 9690302137,
+                "name": "Prince",
+                "contact": 9192919291,
               },
             );
           },
